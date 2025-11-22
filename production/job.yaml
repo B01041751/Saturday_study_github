@@ -1,11 +1,11 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: .
-command: python model.py --trainingdata ${{ inputs.training_data }}
+command: python model1.py --trainingdata ${{ inputs.training_data }}
 inputs:
   training_data:
     type: uri_file
-    path: azureml:iris:1
+    path: azureml:saturday_study_iris_data:1
 environment: azureml://registries/azureml/environments/sklearn-1.1/versions/14
-compute: practica3-ml-compute
-experiment_name: practical3-demo
-description: Practical3 demo
+compute: saturday-study-compute-cluster
+experiment_name: saturday_study_experiment
+description: Saturday Study with Amanda
